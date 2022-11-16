@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!--KENDO UI-->
+	<link rel="stylesheet" href="http://kendo.cdn.telerik.com/2017.1.118/styles/kendo.common.min.css"/>
+    <link rel="stylesheet" href="http://kendo.cdn.telerik.com/2017.1.118/styles/kendo.rtl.min.css"/>
+    <link rel="stylesheet" href="http://kendo.cdn.telerik.com/2017.1.118/styles/kendo.silver.min.css"/>
+    <link rel="stylesheet" href="http://kendo.cdn.telerik.com/2017.1.118/styles/kendo.mobile.all.min.css"/> 
+</head>
+<body>
+	<div id="grid"></div>
+	<!--KENDO UI-->
+	<script src="http://code.jquery.com/jquery-1.12.3.min.js"></script>
+    <script src="http://kendo.cdn.telerik.com/2017.1.118/js/kendo.all.min.js"></script>
+	
+	<script>
+		$("#grid").kendoGrid({
+						selectable: "multiple cell",
+						allowCopy: {
+							delimeter: ",",
+						},
+						columns: [
+							{ field: "Status" },
+							{ field: "Object" },
+							{ field: "Id" },
+							{ field: "Location" },
+							{ field: "Time" },
+							{ field: "Date" },
+						],
+						dataSource: [
+							{ Status: "Status1", Object: "Object1",Id: "Object_Id 01:23:45:67:89:ab",Location: "Lat:38.898648N <br> Lon:77.037692W",Time: "00:00",Date: "MM/DD/YY" },
+							{ Status: "Status1", Object: "Object1",Id: "Object_Id 01:23:45:67:89:ab",Location: "Lat:38.898648N <br> Lon:77.037692W",Time: "00:00",Date: "MM/DD/YY"  },
+							{ Status: "Status1", Object: "Object1",Id: "Object_Id 01:23:45:67:89:ab",Location: "Lat:38.898648N <br> Lon:77.037692W",Time: "00:00",Date: "MM/DD/YY"  },
+							{ Status: "Status1", Object: "Object1",Id: "Object_Id 01:23:45:67:89:ab",Location: "Lat:38.898648N <br> Lon:77.037692W",Time: "00:00",Date: "MM/DD/YY"  }
+						]
+					});
+	</script>
+</body>
+</html>
